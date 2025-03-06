@@ -62,7 +62,6 @@ local sessions = function(opts)
                     value = result,
                     display = result,
                     ordinal = result,
-                    valid = formatted_to_real_session_map[result] ~= current_session
                 }
             end
         },
