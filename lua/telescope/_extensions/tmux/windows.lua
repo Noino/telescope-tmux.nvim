@@ -90,8 +90,8 @@ local windows = function(opts)
                     end
                 end
             })
-            map('i', '<c-d>', custom_actions.delete_window)
-            map('n', '<c-d>', custom_actions.delete_window)
+            map('i', '<M-d>', custom_actions.delete_window)
+            map('n', '<M-d>', custom_actions.delete_window)
             return true
         end
     }):find()
