@@ -29,7 +29,7 @@ local sessions = function(opts)
             if new_session == '' then new_session = vim.fn.input("Enter name for new session: ") end
             if string.lower(new_session) == '' then return end
             local new_session_id = tutils.get_os_command_output {
-                "tmux", "new-session", "-dP", "-s", new_session, "-F", "#{session_id}"
+                "tmux", "new-session", "-dP", "-c", "~", "-s", new_session, "-F", "#{session_id}"
             }[1]
             tutils.get_os_command_output { "tmux", "switch-client", "-t", new_session_id, "-c", current_client }
             actions.close(prompt_bufnr)
